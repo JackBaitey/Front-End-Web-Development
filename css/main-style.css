@@ -1,55 +1,93 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
 /* Themes */
 :root {
---clr-light: lightgrey;
---clr-dark: lightgrey;
---clr-primary: lightgrey;
---clr-secondary: lightgrey;
---clr-accent: lightgrey;
+	--clr-light: rgb(230, 230, 230);
+	--clr-dark: rgb(50, 50, 50);
+	--clr-primary: rgb(81, 171, 255);
+	--clr-secondary: rgb(51, 36, 255);
+	--clr-accent: rgb(255, 0, 0);
 
---foreground: var(--clr-dark);
---background: var(--clr-light);
+	--foreground: var(--clr-dark);
+	--background: var(--clr-light);
 
-
-/* --f-title: ;
+	/* --f-title: ;
 --f-main: ; */
 }
 .darkmode {
-    --clr-light: black;
-    --clr-dark: black;
-    --clr-primary: black;
-    --clr-secondary: black;
-    --clr-accent: black;
-    
-    --foreground: var(--clr-light);
-    --background: var(--clr-dark);
+	--clr-light: black;
+	--clr-dark: black;
+	--clr-primary: black;
+	--clr-secondary: black;
+	--clr-accent: black;
+
+	--foreground: var(--clr-light);
+	--background: var(--clr-dark);
 }
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--ff-body);
-    font-size: 18px;
-    line-height: 1.6;
-  }
+	background: var(--background);
+	color: var(--background);
+	font-family: var(--ff-body);
+	font-size: 18px;
+	line-height: 1.6;
+}
+/* Scrollbar Customisation */
 ::-webkit-scrollbar {
-    width: 1em;
+	width: 1em;
 }
 ::-webkit-scrollbar-track {
-    background: black;
+	background: rgb(30, 30, 30);
 }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, red, blue);
+	background: linear-gradient(90deg, red, blue);
 }
-.dark-mode-toggle {
-    position: absolute;
-    z-index: 100;
-    top: 1em;
-    right: 1em;
-    color: var(--foreground);
-    border: 2px solid currentColor;
-    padding: 4px;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-  }
+/* Navigation */
+header {
+}
+#hamburger-btn {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	margin: 5px;
+	color: var(--foreground);
+	border: none;
+	padding: 0px;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 50px;
+	height: 50px;
+}
+
+nav {
+	background: var(--foreground);
+	display: none;
+	margin: 0;
+}
+nav li {
+	display: block;
+	padding: 1em;
+	width: 100%;
+	text-align: center;
+}
+nav li:hover {
+	background: rgb(25, 25, 25);
+}
+/*  */
+#dark-mode-toggle {
+	position: absolute;
+	z-index: 100;
+	top: 1em;
+	right: 1em;
+	color: var(--foreground);
+	border: 2px solid currentColor;
+	padding: 4px;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+}
