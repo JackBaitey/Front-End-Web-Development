@@ -1,0 +1,55 @@
+/* Themes */
+:root {
+--clr-light: lightgrey;
+--clr-dark: lightgrey;
+--clr-primary: lightgrey;
+--clr-secondary: lightgrey;
+--clr-accent: lightgrey;
+
+--foreground: var(--clr-dark);
+--background: var(--clr-light);
+
+
+/* --f-title: ;
+--f-main: ; */
+}
+.darkmode {
+    --clr-light: black;
+    --clr-dark: black;
+    --clr-primary: black;
+    --clr-secondary: black;
+    --clr-accent: black;
+    
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+}
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--ff-body);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+::-webkit-scrollbar {
+    width: 1em;
+}
+::-webkit-scrollbar-track {
+    background: black;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, red, blue);
+}
+.dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--foreground);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+  }
