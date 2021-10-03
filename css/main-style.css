@@ -2,11 +2,14 @@
 	box-sizing: border-box;
 	margin: 0;
 }
+html {
+	scroll-behavior: smooth;
+}
 /* Themes */
 :root {
-	--clr-light: rgb(230, 230, 230);
-	--clr-dark: rgb(50, 50, 50);
-	--clr-primary: rgb(81, 171, 255);
+	--clr-light: rgb(255, 255, 255);
+	--clr-dark: rgb(216, 216, 216);
+	--clr-primary: rgb(75, 75, 75);
 	--clr-secondary: rgb(51, 36, 255);
 	--clr-accent: rgb(255, 0, 0);
 
@@ -28,7 +31,7 @@
 }
 body {
 	background: var(--background);
-	color: var(--background);
+	color: var(--clr-primary);
 	font-family: var(--ff-body);
 	font-size: 18px;
 	line-height: 1.6;
@@ -61,19 +64,18 @@ header {
 	width: 50px;
 	height: 50px;
 }
-
-nav {
-	background: var(--foreground);
+#navigation {
+	background: var(--clr-dark);
 	display: none;
 	margin: 0;
 }
-nav li {
+#navigation li {
 	display: block;
 	padding: 1em;
 	width: 100%;
 	text-align: center;
 }
-nav li:hover {
+#navigation li:hover {
 	background: rgb(25, 25, 25);
 }
 /*  */
@@ -90,4 +92,15 @@ nav li:hover {
 	border-radius: 5px;
 	width: 30px;
 	height: 30px;
+}
+@media (min-width: 600px) {
+	#navigation {
+		display: block;
+	}
+	#navigation li {
+		display: inline;
+	}
+	#hamburger-btn {
+		display: none;
+	}
 }
