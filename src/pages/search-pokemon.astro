@@ -1,0 +1,15 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Search Pokemon">
+<section class="container">
+<div class="textbox-container">
+<h2>Search for a Pokemon</h2>
+<input id="searchBox" class="textbox" type="text">
+<input id="searchBtn" class="submit button-primary" type="submit" value="Search">
+</div>
+<ul id="pokemon-list"></ul>
+<script type="module" src={Astro.resolve('../scripts/api/api-main.js')}></script>
+</section>
+</MainLayout>

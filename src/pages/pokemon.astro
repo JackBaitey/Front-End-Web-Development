@@ -1,0 +1,41 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout id="page-name" title="Pokemon">
+<button class="back-btn" onclick="history.back()">Go Back</button>
+<div class="container">
+<h1 id="name1"></h1>
+<table class="u-full-width">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td id="name2"></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Image</td>
+      <td><img id="img" src="" alt="Pokemon"></td>
+    </tr>
+    <tr>
+      <td>Height</td>
+      <td id="height"></td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td id="weight"></td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td id="type"></td>
+    </tr>
+    <tr>
+      <td>Weaknesses</td>
+      <td id="weaknesses"></td>
+    </tr>
+  </tbody>
+</table>
+
+<script type="module" src={Astro.resolve('../scripts/api/show-pokemon.js')}></script>
+</div>
+</MainLayout>

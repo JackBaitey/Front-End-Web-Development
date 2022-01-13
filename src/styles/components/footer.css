@@ -1,0 +1,15 @@
+footer {
+	background-color: #333;
+	padding: 3rem;
+	color: #999;
+	text-align: center;
+	margin-top: 90vh;
+}
+footer a {
+	text-decoration: none;
+	color: #999;
+}
+.copyright {
+	padding-top: 3em;
+	bottom: 0;
+}

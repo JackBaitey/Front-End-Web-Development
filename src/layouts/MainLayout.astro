@@ -1,0 +1,38 @@
+---
+// import Navbar from 'react-bootstrap/Navbar';
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro';
+let {title} = Astro.props;
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href={Astro.resolve('../styles/components/navigation.css')}>
+    <link rel="stylesheet" href={Astro.resolve('../styles/components/footer.css')}>
+    <link rel="stylesheet" href={Astro.resolve('../../node_modules/@fortawesome/fontawesome-free/css/all.css')}>
+    <link rel="stylesheet" href={Astro.resolve('../styles/framework/skeleton.css')}>
+    <link rel="stylesheet" href={Astro.resolve('../styles/main.css')}>
+    <!-- <script defer src="../node_modules/@fontawesome/fontawesome-free/css/all.css"></script> -->
+  
+<style>
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: min(100%, 68ch);
+        }
+    </style>
+</head>
+<body>
+<!-- <Navbar></Navbar> -->
+<Navigation></Navigation>
+<!-- <ReactCounter></ReactCounter> -->
+<slot></slot>
+<Footer></Footer>
+</body>
+</html>
